@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title%} Merchex {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'listings/css/style.css' %}" />
+</head>
+<body >
+ <img src="{% static 'listings/img/im1.jpg' %}">
+ <nav>
+     <ul style="display:flex; list-style:none; justify-content: space-around; width:50%;">
+         <li><a href=" {% url 'band_list' %} " style="background:green; padding: 4px;text-decoration:none; color: white; "> liste des Groupes</a></li>
+         <li><a href=" {% url 'annonces' %} " style="background:green; padding: 4px;text-decoration:none; color: white; "> Annonces</a></li>
+         <li><a href=" {% url 'listing_list' %} " style="background:green; padding: 4px;text-decoration:none; color: white; "> Liste de listings</a></li>
+     <li><a href=" {% url 'contact_us' %} " style="background:green; padding: 4px;text-decoration:none; color: white; "> Contact</a></li>
+     </ul>
+ </nav>
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
+

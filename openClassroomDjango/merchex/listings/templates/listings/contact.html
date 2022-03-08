@@ -1,0 +1,15 @@
+<p>Nous sommes là pour vous aider.</p>
+
+{% if val %}
+    {% if val == 1 %}
+    <p style="background-color: green; color: white;">
+        Mail envoyé avec succèss
+    </p>
+    {% endif %}
+{% endif %}
+
+<form action="" method="post" novalidate style="display:flex; flex-direction: column; width: 20%; padding: 12px;">
+{% csrf_token %}
+{{ form }}
+<input type="submit" value="Envoyer">
+</form>

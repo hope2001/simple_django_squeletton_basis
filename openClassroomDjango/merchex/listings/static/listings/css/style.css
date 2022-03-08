@@ -1,0 +1,13 @@
+*
+{
+color: orange;
+background-color: black;
+}
+.errorlist{
+margin-bottom: -10px ;
+ }
+
+ .errorlist li {
+font-size: 8px;
+ color: red;
+ }

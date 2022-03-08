@@ -1,0 +1,21 @@
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h1>Groupes</h1>
+<a href=" {% url 'band_add' %} " style="background:brown; padding: 4px;text-decoration:none; color: white; "> Ajouter un Groupe</a>
+
+
+<ul>
+ {% for band in bands %}
+  <li>
+   <a href="  {% url 'band_details' band.id %}">{{ band.name }}</a>
+   <a href="  {% url 'band_upd' band.id %}">[Modifier]</a>
+  </li>
+
+ {% endfor %}
+</ul>
+
+{% endblock %}
+

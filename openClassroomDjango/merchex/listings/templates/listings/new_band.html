@@ -1,0 +1,14 @@
+{% extends 'listings/base.html' %}
+    <title>{% block title%} Add Groupe {% endblock%}</title>
+
+{% block content%}
+
+<h1> Ajouter un Groupe</h1>
+
+<form action="" method="post" >
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Envoyer">
+</form>
+
+{% endblock%}

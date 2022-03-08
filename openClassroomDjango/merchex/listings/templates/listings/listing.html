@@ -1,0 +1,21 @@
+{% extends 'listings/base.html' %}
+    <title>{% block title%} listing {% endblock%}</title>
+
+    {% block content%}
+
+<h1> listings de l'app Django !</h1>
+<a href=" {% url 'listing_add' %} " style="background:brown; padding: 4px;text-decoration:none; color: white; "> Ajouter une Annonce</a>
+
+        <p style="color:red;">Mes Annonces préférées sont :</p>
+        <!-- TODO : liste des groupes -->
+
+    <ul>
+          {% for listing in listings %}
+            <li> {{ listing.title | lower}} </li>
+                <li> <a href="{% url 'listing_details' listing.id %}" style="text-decoration: none; color: pink;">Voir les détails</a> </li>
+                <li> <a href="{% url 'listing_upd' listing.id %}" style="text-decoration: none; color: green;">Modifier</a> </li>
+
+            {% endfor %}
+    </ul>
+
+{% endblock%}

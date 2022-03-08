@@ -1,0 +1,24 @@
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{ listing.title }}</h2>
+
+<ul>
+ <li> Produit de : {{ listing.band_id}}</li>
+ <li>Date de création : {{ listing.created_at }}</li>
+ <li> Identifiant : {{ listing.title}}.{{ listing.id}}</li>
+
+</ul>
+
+<p>{{ listing.description }}</p>
+
+<a href=" {% url 'listing_list' %} " style="background:red; padding: 4px; "> Retour</a>
+
+{% endblock %}
+
+
+
+
+
